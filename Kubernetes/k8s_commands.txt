@@ -1,0 +1,108 @@
+	1. docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
+	2.  
+	3. kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+	4. kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+	5. kubectl scale deployment hello-world-rest-api --replicas=3
+	6. kubectl delete pod hello-world-rest-api-58ff5dd898-62l9d
+	7. kubectl autoscale deployment hello-world-rest-api --max=10 --cpu-percent=70
+	8. kubectl edit deployment hello-world-rest-api #minReadySeconds: 15
+	9. kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+	10.  
+	11. gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
+	12. kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+	13. kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+	14. kubectl set image deployment hello-world-rest-api hello-world-rest-api=DUMMY_IMAGE:TEST
+	15. kubectl get events --sort-by=.metadata.creationTimestamp
+	16. kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+	17. kubectl get events --sort-by=.metadata.creationTimestamp
+	18. kubectl get componentstatuses
+	19. kubectl get pods --all-namespaces
+	20.  
+	21. kubectl get events
+	22. kubectl get pods
+	23. kubectl get replicaset
+	24. kubectl get deployment
+	25. kubectl get service
+	26.  
+	27. kubectl get pods -o wide
+	28.  
+	29. kubectl explain pods
+	30. kubectl get pods -o wide
+	31.  
+	32. kubectl describe pod hello-world-rest-api-58ff5dd898-9trh2
+	33.  
+	34. kubectl get replicasets
+	35. kubectl get replicaset
+	36.  
+	37. kubectl scale deployment hello-world-rest-api --replicas=3
+	38. kubectl get pods
+	39. kubectl get replicaset
+	40. kubectl get events
+	41. kubectl get events --sort.by=.metadata.creationTimestamp
+	42.  
+	43. kubectl get rs
+	44. kubectl get rs -o wide
+	45. kubectl set image deployment hello-world-rest-api hello-world-rest-api=DUMMY_IMAGE:TEST
+	46. kubectl get rs -o wide
+	47. kubectl get pods
+	48. kubectl describe pod hello-world-rest-api-85995ddd5c-msjsm
+	49. kubectl get events --sort-by=.metadata.creationTimestamp
+	50.  
+	51. kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+	52. kubectl get events --sort-by=.metadata.creationTimestamp
+	53. kubectl get pods -o wide
+	54. kubectl delete pod hello-world-rest-api-67c79fd44f-n6c7l
+	55. kubectl get pods -o wide
+	56. kubectl delete pod hello-world-rest-api-67c79fd44f-8bhdt
+	57.  
+	58. kubectl get componentstatuses
+	59. kubectl get pods --all-namespaces
+	60.  
+	61. gcloud auth login
+	62. kubectl version
+	63. gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
+	64.  
+	65. kubectl rollout history deployment hello-world-rest-api
+	66. kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.3.RELEASE --record=true
+	67. kubectl rollout undo deployment hello-world-rest-api --to-revision=1
+	68.  
+	69. kubectl logs hello-world-rest-api-58ff5dd898-6ctr2
+	70. kubectl logs -f hello-world-rest-api-58ff5dd898-6ctr2
+	71.  
+	72. kubectl get deployment hello-world-rest-api -o yaml
+	73. kubectl get deployment hello-world-rest-api -o yaml > deployment.yaml
+	74. kubectl get service hello-world-rest-api -o yaml > service.yaml
+	75. kubectl apply -f deployment.yaml
+	76. kubectl get all -o wide
+	77. kubectl delete all -l app=hello-world-rest-api
+	78.  
+	79. kubectl get svc --watch
+	80. kubectl diff -f deployment.yaml
+	81. kubectl delete deployment hello-world-rest-api
+	82. kubectl get all -o wide
+	83. kubectl delete replicaset.apps/hello-world-rest-api-797dd4b5dc
+	84.  
+	85. kubectl get pods --all-namespaces
+	86. kubectl get pods --all-namespaces -l app=hello-world-rest-api
+	87. kubectl get services --all-namespaces
+	88. kubectl get services --all-namespaces --sort-by=.spec.type
+	89. kubectl get services --all-namespaces --sort-by=.metadata.name
+	90. kubectl cluster-info
+	91. kubectl cluster-info dump
+	92. kubectl top node
+	93. kubectl top pod
+	94. kubectl get services
+	95. kubectl get svc
+	96. kubectl get ev
+	97. kubectl get rs
+	98. kubectl get ns
+	99. kubectl get nodes
+	100. kubectl get no
+	101. kubectl get pods
+	102. kubectl get po
+	103.  
+	104. kubectl delete all -l app=hello-world-rest-api
+	105. kubectl get all
+	106.  
+	107. kubectl apply -f deployment.yaml 
+kubectl apply -f ../currency-conversion/deployment.yaml 
